@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #{$primary-color};
+    --accent-color: #{$accent-color};
+    --bg-color: #{$bg-color};
+    --highlight-color: #{$highlight-color};
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+  }
+  

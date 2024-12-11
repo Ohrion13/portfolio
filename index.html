@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Mickael Blondeau, Développeur Full Stack à Caen">
+  <title>Portfolio Mickael Blondeau</title>
+  <link rel="stylesheet" href="scss/style.scss">
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <img src="img/logo.png" alt="Logo Mickael Blondeau">
+    </div>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#presentation" class="nav__link">Accueil</a></li>
+        <li class="nav__item"><a href="#skills" class="nav__link">Compétences</a></li>
+        <li class="nav__item"><a href="#projects" class="nav__link">Projets</a></li>
+        <li class="nav__item"><a href="#experience" class="nav__link">Expérience</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="presentation" class="section presentation">
+      <h1 class="section__title">Présentation</h1>
+      <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae lorem tristique volutpat.</p>
+    </section>
+
+    <section id="skills" class="section skills">
+      <h2 class="section__title">Compétences</h2>
+      <ul class="skills__list">
+        <li class="skills__item">HTML, CSS & SCSS</li>
+        <li class="skills__item">JavaScript</li>
+        <li class="skills__item">mySQL</li>
+        <li class="skills__item">PHP</li>
+        <li class="skills__item">Débutant en Laravel</li>
+      </ul>
+    </section>
+
+    <section id="technologies" class="section technologies">
+      <h2 class="section__title">Autres Technologies</h2>
+      <ul class="technologies__list">
+        <li class="technologies__item">GitHub</li>
+        <li class="technologies__item">Composer</li>
+        <li class="technologies__item">Docker</li>
+        <li class="technologies__item">Figma</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Projets</h2>
+      <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae lorem tristique volutpat.</p>
+    </section>
+
+    <section id="experience" class="section experience">
+      <h2 class="section__title">Expérience & Formation</h2>
+      <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae lorem tristique volutpat.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2 class="section__title">Contact</h2>
+      <form class="contact__form" action="#" method="post">
+        <input type="text" name="name" placeholder="Votre nom" class="contact__input" required>
+        <input type="email" name="email" placeholder="Votre email" class="contact__input" required>
+        <textarea name="message" placeholder="Votre message" class="contact__textarea" required></textarea>
+        <button type="submit" class="contact__button">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2024 Mickael Blondeau</p>
+    <div class="footer__social-links">
+      <a href="https://www.linkedin.com" target="_blank" class="footer__social-link">LinkedIn</a>
+      <a href="https://github.com" target="_blank" class="footer__social-link">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
