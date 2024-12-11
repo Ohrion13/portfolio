@@ -20,66 +20,60 @@
         <span class="nav__burger-line"></span>
         <span class="nav__burger-line"></span>
       </button>
-      
       <ul class="nav__list">
-        <li class="nav__item"><a href="#presentation" class="nav__link">Accueil</a></li>
-        <li class="nav__item"><a href="#skills" class="nav__link">Compétences</a></li>
-        <li class="nav__item"><a href="#projects" class="nav__link">Projets</a></li>
-        <li class="nav__item"><a href="#experience" class="nav__link">Expérience</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        <li class="nav__item"><a href="#character-history" class="nav__link">Histoire</a></li>
+        <li class="nav__item"><a href="#character-skills" class="nav__link">Compétences</a></li>
+        <li class="nav__item"><a href="#character-proficiencies" class="nav__link">Maîtrises et Langues</a></li>
+        <li class="nav__item"><a href="#character-inventory" class="nav__link">Inventaire</a></li>
+        <li class="nav__item"><a href="#character-spells" class="nav__link">Sorts</a></li>
       </ul>
     </nav>
   </header>
-  
 
-  <main>
-    <section id="presentation" class="section presentation">
-      <h1 class="section__title">Présentation</h1>
-      <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae lorem
-        tristique volutpat.</p>
-    </section>
-
-    <section id="skills" class="section skills">
-      <h2 class="section__title">Compétences</h2>
-      <ul class="skills__list">
-        <li class="skills__item">HTML, CSS & SCSS</li>
-        <li class="skills__item">JavaScript</li>
-        <li class="skills__item">mySQL</li>
-        <li class="skills__item">PHP</li>
-        <li class="skills__item">Débutant en Laravel</li>
+  <main class="character-sheet">
+    <section id="character-history" class="character-sheet__section character-history">
+      <h2 class="character-sheet__title">Histoire du personnage</h2>
+      <p class="character-sheet__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae lorem tristique volutpat.</p>
+      <ul class="character-traits">
+        <li class="character-traits__item">Âge : 41 ans</li>
+        <li class="character-traits__item">Race : Humain</li>
+        <li class="character-traits__item">Classe : Développeur Web</li>
+        <li class="character-traits__item">Alignement : Neutre</li>
+        <li class="character-traits__item">Yeux : Marron</li>
+        <li class="character-traits__item">Cheveux : Blanc</li>
+        <li class="character-traits__item">XP : Débutant</li>
       </ul>
     </section>
 
-    <section id="technologies" class="section technologies">
-      <h2 class="section__title">Autres Technologies</h2>
-      <ul class="technologies__list">
-        <li class="technologies__item">GitHub</li>
-        <li class="technologies__item">Composer</li>
-        <li class="technologies__item">Docker</li>
-        <li class="technologies__item">Figma</li>
+    <section id="character-skills" class="character-sheet__section character-skills">
+      <h2 class="character-sheet__title">Compétences</h2>
+      <ul class="skills-list">
+        <li class="skills-list__item">HTML <span class="skills-list__icon acquired"></span></li>
+        <li class="skills-list__item">CSS & SCSS <span class="skills-list__icon acquired"></span></li>
+        <li class="skills-list__item">JavaScript <span class="skills-list__icon acquired"></span></li>
+        <li class="skills-list__item">PHP <span class="skills-list__icon acquired"></span></li>
+        <li class="skills-list__item">Laravel <span class="skills-list__icon beginner"></span></li>
       </ul>
     </section>
 
-    <section id="projects" class="section projects">
-      <h2 class="section__title">Projets</h2>
-      <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae lorem
-        tristique volutpat.</p>
+    <section id="character-proficiencies" class="character-sheet__section character-proficiencies">
+      <h2 class="character-sheet__title">Autres maîtrises et langues</h2>
+      <ul class="proficiencies-list">
+        <li class="proficiencies-list__item">GitHub <span class="proficiencies-list__icon acquired"></span></li>
+        <li class="proficiencies-list__item">Composer <span class="proficiencies-list__icon acquired"></span></li>
+        <li class="proficiencies-list__item">Docker <span class="proficiencies-list__icon acquired"></span></li>
+        <li class="proficiencies-list__item">Figma <span class="proficiencies-list__icon acquired"></span></li>
+      </ul>
     </section>
 
-    <section id="experience" class="section experience">
-      <h2 class="section__title">Expérience & Formation</h2>
-      <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae lorem
-        tristique volutpat.</p>
+    <section id="character-inventory" class="character-sheet__section character-inventory">
+      <h2 class="character-sheet__title">Inventaire</h2>
+      <p class="character-sheet__text">Liste des projets (à compléter).</p>
     </section>
 
-    <section id="contact" class="section contact">
-      <h2 class="section__title">Contact</h2>
-      <form class="contact__form" action="#" method="post">
-        <input type="text" name="name" placeholder="Votre nom" class="contact__input" required>
-        <input type="email" name="email" placeholder="Votre email" class="contact__input" required>
-        <textarea name="message" placeholder="Votre message" class="contact__textarea" required></textarea>
-        <button type="submit" class="contact__button">Envoyer</button>
-      </form>
+    <section id="character-spells" class="character-sheet__section character-spells">
+      <h2 class="character-sheet__title">Sorts</h2>
+      <p class="character-sheet__text">Expériences professionnelles et formation (à compléter).</p>
     </section>
   </main>
 

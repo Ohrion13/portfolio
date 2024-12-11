@@ -19,7 +19,7 @@ function smoothScroll() {
  */
 function handleSectionVisibility() {
   window.addEventListener('scroll', function () {
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('.character-sheet__section');
     sections.forEach(section => {
       const sectionTop = section.getBoundingClientRect().top;
       if (sectionTop < window.innerHeight * 0.8) {
@@ -30,6 +30,7 @@ function handleSectionVisibility() {
     });
   });
 }
+
 
 /**
  * Burger menu toggle
