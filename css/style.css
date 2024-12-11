@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   font-family: "Roboto", sans-serif;
 }
@@ -25,7 +26,7 @@ body {
 
 .header {
   background-color: var(--primary-color);
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,13 +34,56 @@ body {
   top: 0;
   z-index: 1000;
 }
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header__logo img {
-  max-width: 150px;
+  max-width: 9.375rem;
+}
+.header .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav__burger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0.625rem;
+}
+.header .nav__burger-line {
+  width: 1.875rem;
+  height: 0.1875rem;
+  background-color: #fff;
+  border-radius: 0.3125rem;
 }
 .header .nav__list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.625rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  padding: 1.25rem;
+}
+@media (min-width: 1024px) {
+  .header .nav__list {
+    flex-direction: row;
+  }
+}
+.header .nav__list.active {
+  display: flex;
 }
 .header .nav__item .nav__link {
   color: #fff;
@@ -50,9 +94,40 @@ body {
 .header .nav__item .nav__link:hover {
   color: var(--accent-color);
 }
+@media (min-width: 768px) {
+  .header .nav__burger {
+    display: flex;
+  }
+  .header .nav__list {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header .nav {
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header .nav {
+    position: absolute;
+    top: -3.75rem;
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+  .header .header__logo {
+    margin-bottom: 1.25rem;
+  }
+}
 
 .section {
-  padding: 60px 20px;
+  padding: 3.75rem 1.25rem;
 }
 .section__title {
   text-align: center;
@@ -69,11 +144,11 @@ body {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   background-color: var(--accent-color);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -84,27 +159,27 @@ button:hover {
 .contact__form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
+  gap: 0.9375rem;
+  max-width: 31.25rem;
   margin: 0 auto;
 }
 .contact__form .contact__input,
 .contact__form .contact__textarea {
-  padding: 10px;
+  padding: 0.625rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 .footer {
   background-color: var(--primary-color);
   color: white;
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 .footer__social-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 .footer .footer__social-link {
   color: white;

@@ -1,0 +1,18 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 49 | /       @include desktop {
+ * 50 | |         flex-direction: row;
+ * 51 | \       }
+ *    '
+ *   scss\index.scss 49:7  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 49 \2502  \250c        @include desktop {\a 50 \2502  \2502          flex-direction: row;\a 51 \2502  \2514        }\a    \2575 \a   scss\\index.scss 49:7  root stylesheet";
+}
