@@ -10,30 +10,57 @@
 </head>
 
 <body>
+
   <header class="header">
+
     <div class="header__logo">
       <img src="img/logo-png.png" alt="Logo Mickael Blondeau">
     </div>
-    <nav class="nav">
+
+    <nav class="nav" role="navigation">
+
       <button class="nav__burger" aria-label="Ouvrir le menu">
-        <span class="nav__burger-line"></span>
-        <span class="nav__burger-line"></span>
-        <span class="nav__burger-line"></span>
+        <span class="nav__burger-line" aria-hidden="true"></span>
+        <span class="nav__burger-line" aria-hidden="true"></span>
+        <span class="nav__burger-line" aria-hidden="true"></span>
       </button>
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#character-history" class="nav__link">Histoire</a></li>
-        <li class="nav__item"><a href="#character-skills" class="nav__link">Compétences</a></li>
-        <li class="nav__item"><a href="#character-proficiencies" class="nav__link">Maîtrises et Langues</a></li>
-        <li class="nav__item"><a href="#character-inventory" class="nav__link">Inventaire</a></li>
-        <li class="nav__item"><a href="#character-spells" class="nav__link">Sorts</a></li>
+
+      <ul class="nav__list" aria-label="Menu de navigation">
+        <li class="nav__item"><a href="#character-history" class="nav__link"
+            aria-label="Histoire du personnage">Histoire</a></li>
+        <li class="nav__item"><a href="#character-skills" class="nav__link" aria-label="Compétences">Compétences</a>
+        </li>
+        <li class="nav__item"><a href="#character-proficiencies" class="nav__link"
+            aria-label="Maîtrises et Langues">Maîtrises et Langues</a></li>
+        <li class="nav__item"><a href="#character-inventory" class="nav__link" aria-label="Inventaire">Inventaire</a>
+        </li>
+        <li class="nav__item"><a href="#character-spells" class="nav__link" aria-label="Sorts">Sorts</a></li>
       </ul>
+
     </nav>
+
   </header>
 
   <main class="character-sheet">
+
+    <section class="character-sheet__section character-photo">
+
+      <h1 class="character-photo__name">Blondeau Mickael</h1>
+
+      <figure class="character-photo__figure">
+        <img src="img/photo-mickael.jpg" alt="Photo de Mickael Blondeau" class="character-photo__img">
+        <figcaption class="character-photo__caption">Développeur Web</figcaption>
+      </figure>
+
+    </section>
+
     <section id="character-history" class="character-sheet__section character-history">
+
       <h2 class="character-sheet__title">Histoire du personnage</h2>
-      <p class="character-sheet__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae lorem tristique volutpat.</p>
+
+      <p class="character-sheet__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae
+        lorem tristique volutpat.</p>
+
       <ul class="character-traits">
         <li class="character-traits__item">Âge : 41 ans</li>
         <li class="character-traits__item">Race : Humain</li>
@@ -43,10 +70,13 @@
         <li class="character-traits__item">Cheveux : Blanc</li>
         <li class="character-traits__item">XP : Débutant</li>
       </ul>
+
     </section>
 
     <section id="character-skills" class="character-sheet__section character-skills">
+
       <h2 class="character-sheet__title">Compétences</h2>
+
       <ul class="skills-list">
         <li class="skills-list__item">HTML <span class="skills-list__icon acquired"></span></li>
         <li class="skills-list__item">CSS & SCSS <span class="skills-list__icon acquired"></span></li>
@@ -54,38 +84,53 @@
         <li class="skills-list__item">PHP <span class="skills-list__icon acquired"></span></li>
         <li class="skills-list__item">Laravel <span class="skills-list__icon beginner"></span></li>
       </ul>
+
     </section>
 
     <section id="character-proficiencies" class="character-sheet__section character-proficiencies">
+
       <h2 class="character-sheet__title">Autres maîtrises et langues</h2>
+
       <ul class="proficiencies-list">
         <li class="proficiencies-list__item">GitHub <span class="proficiencies-list__icon acquired"></span></li>
         <li class="proficiencies-list__item">Composer <span class="proficiencies-list__icon acquired"></span></li>
         <li class="proficiencies-list__item">Docker <span class="proficiencies-list__icon acquired"></span></li>
         <li class="proficiencies-list__item">Figma <span class="proficiencies-list__icon acquired"></span></li>
       </ul>
+
     </section>
 
     <section id="character-inventory" class="character-sheet__section character-inventory">
+
       <h2 class="character-sheet__title">Inventaire</h2>
+
       <p class="character-sheet__text">Liste des projets (à compléter).</p>
+
     </section>
 
     <section id="character-spells" class="character-sheet__section character-spells">
+
       <h2 class="character-sheet__title">Sorts</h2>
+
       <p class="character-sheet__text">Expériences professionnelles et formation (à compléter).</p>
+
     </section>
+
   </main>
 
   <footer class="footer">
+
     <p class="footer__copyright">&copy; 2024 Mickael Blondeau</p>
+
     <div class="footer__social-links">
-      <a href="https://www.linkedin.com" target="_blank" class="footer__social-link">LinkedIn</a>
-      <a href="https://github.com" target="_blank" class="footer__social-link">GitHub</a>
+      <a href="https://www.linkedin.com" target="_blank" class="footer__social-link" aria-label="LinkedIn">LinkedIn</a>
+      <a href="https://github.com" target="_blank" class="footer__social-link" aria-label="GitHub">GitHub</a>
     </div>
+
   </footer>
 
   <script src="js/main.js"></script>
+
 </body>
 
 </html>

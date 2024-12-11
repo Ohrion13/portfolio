@@ -131,14 +131,58 @@ body {
   flex-direction: column;
   gap: 2rem;
   padding: 1.25rem;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
 }
+
 .character-sheet__section {
   background-color: var(--bg-color);
   border: 1px solid var(--primary-color);
   border-radius: 0.625rem;
   padding: 1.25rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.character-sheet__section.character-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 3rem 1.25rem;
+}
+
+.character-photo__name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.character-photo__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-photo__img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.character-photo__caption {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
 .character-sheet__title {
   font-family: "Press Start 2P", cursive;
   font-size: 1.5rem;
@@ -146,25 +190,14 @@ body {
   margin-bottom: 1rem;
   color: var(--accent-color);
 }
+
 .character-sheet__text {
   text-align: center;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
 
-.character-traits {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0;
-  justify-content: space-around;
-}
-.character-traits__item {
-  font-weight: bold;
-  font-size: 1rem;
-}
-
+.character-traits,
 .skills-list,
 .proficiencies-list {
   list-style: none;
@@ -174,6 +207,8 @@ body {
   padding: 0;
   justify-content: space-around;
 }
+
+.character-traits__item,
 .skills-list__item,
 .proficiencies-list__item {
   display: flex;
@@ -181,6 +216,7 @@ body {
   gap: 0.5rem;
   font-size: 1rem;
 }
+
 .skills-list__icon,
 .proficiencies-list__icon {
   width: 1rem;
