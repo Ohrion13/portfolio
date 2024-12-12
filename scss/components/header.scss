@@ -1,0 +1,118 @@
+.header {
+    background-color: var(--primary-color);
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      img {
+        max-width: 9.375rem;
+      }
+    }
+  
+    .nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      &__burger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3125rem;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0.625rem;
+      }
+  
+      &__burger-line {
+        width: 1.875rem;
+        height: 0.1875rem;
+        background-color: #fff;
+        border-radius: 0.3125rem;
+      }
+  
+      &__list {
+        list-style: none;
+        display: flex;
+        gap: 1.25rem;
+  
+        @include desktop {
+          flex-direction: row;
+        }
+  
+        display: none;
+        flex-direction: column;
+        gap: 0.625rem;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 3.75rem;
+        left: 0;
+        padding: 1.25rem;
+  
+        &.active {
+          display: flex;
+        }
+      }
+  
+      &__item {
+        .nav__link {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: var(--accent-color);
+          }
+  
+        }
+      }
+  
+      @include tablet {
+        &__burger {
+          display: flex;
+        }
+  
+        &__list {
+          display: none;
+        }
+      }
+    }
+  
+    @include tablet {
+      justify-content: space-between;
+  
+      .nav {
+        align-items: center;
+      }
+  
+    }
+  
+    @include desktop {
+      justify-content: center;
+      flex-direction: column;
+  
+      .nav {
+        position: absolute;
+        top: -3.75rem;
+        flex-direction: row;
+        gap: 2.5rem;
+      }
+  
+      .header__logo {
+        margin-bottom: 1.25rem;
+      }
+  
+    }
+  }

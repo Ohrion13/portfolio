@@ -2,4 +2,9 @@
 @import 'reset';
 @import 'root';
 @import 'mixins';
-@import 'index';
+@import 'components/header';
+@import 'components/index';
+@import 'components/character';
+@import 'components/presentation';
+@import 'components/skills';
+@import 'components/footer';
