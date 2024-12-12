@@ -33,16 +33,19 @@ function handleSectionVisibility() {
 
 
 /**
- * Burger menu toggle
- * Toggles the visibility of the mobile navigation menu when the burger button is clicked.
+ * Toggle the active state of the burger menu and header.
+ * This function adds or removes the 'active' class on the navigation menu and the header 
+ * when the burger button is clicked.
  */
 function toggleBurgerMenu() {
   const burgerButton = document.querySelector('.nav__burger');
+  const header = document.querySelector('.header');
   const navList = document.querySelector('.nav__list');
 
   burgerButton.addEventListener('click', () => {
     navList.classList.toggle('active');
     burgerButton.classList.toggle('active');
+    header.classList.toggle('active');
   });
 }
 
