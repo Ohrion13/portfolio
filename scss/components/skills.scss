@@ -1,3 +1,6 @@
+@use '../var' as *;
+@use '../mixins' as mixins;
+
 .skills-list,
 .proficiencies-list {
   list-style: none;
@@ -12,21 +15,20 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 1rem;
+    color: $text-color;
   }
 
   &__icon {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background-color: var(--bg-color);
-    border: 2px solid var(--primary-color);
+    background-color: $secondary-color;
+    border: 2px solid $border-color;
 
     &.acquired {
-      background-color: var(--accent-color);
+      background-color: $title-color;
     }
 
-    &.beginner {
-      background-color: var(--highlight-color);
-    }
   }
 }
+

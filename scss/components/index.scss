@@ -1,23 +1,5 @@
-.character-sheet {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.25rem;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-}
-
-.character-sheet__section {
-  background-color: var(--bg-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 0.625rem;
-  padding: 1.25rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+@use '../var' as *;
+@use '../mixins' as mixins;
 
 .character-sheet {
   display: flex;
@@ -28,7 +10,7 @@
   justify-content: flex-start;
   min-height: 100vh;
 
-  @include tablet {
+  @include mixins.tablet {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -37,8 +19,8 @@
 }
 
 .character-sheet__section {
-  background-color: var(--bg-color);
-  border: 1px solid var(--primary-color);
+  background-color: $secondary-color;
+  border: 1px solid $border-color;
   border-radius: 0.625rem;
   padding: 1.25rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -46,7 +28,7 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  @include tablet {
+  @include mixins.tablet {
     flex: 1 1 calc(50% - 1rem);
   }
 }

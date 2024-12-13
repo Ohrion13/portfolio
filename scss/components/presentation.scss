@@ -1,27 +1,32 @@
+@use '../var' as *;
+@use '../mixins' as mixins;
+
 .character-sheet__title {
-    font-family: $heading-font-family;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--accent-color);
+  font-family: $heading-font-family;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: $title-color;
+}
+
+.character-sheet__text {
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+.character-traits {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  justify-content: space-around;
+
+  &__item {
+    font-weight: bold;
+    font-size: 1rem;
+    color: $text-color;
   }
-  
-  .character-sheet__text {
-    text-align: center;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-  
-  .character-traits {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0;
-    justify-content: space-around;
-  
-    &__item {
-      font-weight: bold;
-      font-size: 1rem;
-    }
-  }
+}

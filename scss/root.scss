@@ -1,11 +1,14 @@
-:root {
-  --primary-color: #{$primary-color};
-  --accent-color: #{$accent-color};
-  --bg-color: #{$bg-color};
-  --highlight-color: #{$highlight-color};
+@use 'mixins';
+
+html {
+  font-size: 16px;
+  
+  @include mixins.tablet {
+    font-size: 18px;
+  }
+
+  @include mixins.desktop {
+    font-size: 20px;
+  }
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--primary-color);
-}

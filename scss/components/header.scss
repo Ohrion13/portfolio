@@ -1,5 +1,10 @@
+@use '../var' as *;
+@use '../mixins' as mixins;
+
 .header {
-  background-color: var(--primary-color);
+  background-color: $primary-color;
+  color: $text-color;
+  border-bottom: 2px solid #B22222;
   padding: 1.25rem;
   display: flex;
   flex-direction: row;
@@ -17,17 +22,15 @@
     top: 0;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     flex-direction: column;
-
   }
 
-  @include desktop {
+  @include mixins.desktop {
     flex-direction: column;
-
   }
 
-  @include mobile {
+  @include mixins.mobile {
     position: sticky;
     top: 0;
   }
@@ -42,12 +45,12 @@
       max-width: 9.375rem;
       margin-bottom: 0;
 
-      @include tablet {
-      margin-bottom: 2rem;
+      @include mixins.tablet {
+        margin-bottom: 2rem;
       }
-    
-      @include desktop {
-      margin-bottom: 2rem;
+
+      @include mixins.desktop {
+        margin-bottom: 2rem;
       }
     }
   }
@@ -67,7 +70,7 @@
       border: none;
       padding: 0.625rem;
 
-      @include tablet {
+      @include mixins.tablet {
         display: none;
       }
     }
@@ -75,7 +78,7 @@
     &__burger-line {
       width: 1.875rem;
       height: 0.1875rem;
-      background-color: #fff;
+      background-color: $text-color;
       border-radius: 0.3125rem;
     }
 
@@ -84,7 +87,7 @@
       display: flex;
       gap: 1.25rem;
 
-      @include desktop {
+      @include mixins.desktop {
         flex-direction: row;
       }
 
@@ -92,7 +95,7 @@
       flex-direction: column;
       gap: 0.625rem;
       width: 100%;
-      background-color: var(--primary-color);
+      background-color: $primary-color;
       position: absolute;
       top: 10rem;
       left: 0;
@@ -105,18 +108,18 @@
 
     &__item {
       .nav__link {
-        color: #fff;
+        color: $text-color;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s;
 
         &:hover {
-          color: var(--accent-color);
+          color: $title-color;
         }
       }
     }
 
-    @include tablet {
+    @include mixins.tablet {
       .nav__list {
         display: flex;
         flex-direction: row;
@@ -124,7 +127,7 @@
       }
     }
 
-    @include desktop {
+    @include mixins.desktop {
       .nav__list {
         display: flex;
         flex-direction: row;
