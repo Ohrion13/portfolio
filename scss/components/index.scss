@@ -10,6 +10,11 @@
   justify-content: flex-start;
   min-height: 100vh;
 
+  background-image: url('/img/medium7.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   @include mixins.tablet {
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,9 +24,6 @@
 }
 
 .character-sheet__section {
-  background-color: $secondary-color;
-  border: 1px solid $border-color;
-  border-radius: 0.625rem;
   padding: 1.25rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
