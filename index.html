@@ -33,7 +33,7 @@
         <li class="nav__item"><a href="#character-skills" class="nav__link" aria-label="Compétences">Compétences</a>
         </li>
         <li class="nav__item"><a href="#character-proficiencies" class="nav__link"
-            aria-label="Maîtrises et Langues">Maîtrises et Langues</a></li>
+            aria-label="Maîtrises et Langues">Autres maîtrises</a></li>
         <li class="nav__item"><a href="#character-inventory" class="nav__link" aria-label="Inventaire">Inventaire</a>
         </li>
         <li class="nav__item"><a href="#character-spells" class="nav__link" aria-label="Sorts">Sorts</a></li>
@@ -45,19 +45,19 @@
 
   <main class="character-sheet">
 
-    <section class="character-sheet__section character-photo">
-
-      <h1 class="character-sheet__title">Personnage</h1>
-      <p class="character-sheet__text"><span class="character__sub-ttl">Nom : </span>Mickaël</p>
-
-      <figure class="character-photo__figure">
-        <img src="img/photo-mickael.jpg" alt="Photo de Mickael Blondeau" class="character-photo__img">
-        <figcaption class="character-photo__caption">Développeur Web</figcaption>
-      </figure>
-
-    </section>
-
     <div class="character__container-section">
+
+      <section class="character-sheet__section character-photo">
+
+        <h1 class="character-sheet__title">Personnage</h1>
+        <p class="character-sheet__text"><span class="character__sub-ttl">Nom : </span>Mickaël</p>
+
+        <figure class="character-photo__figure">
+          <img src="img/photo-mickael.jpg" alt="Photo de Mickael Blondeau" class="character-photo__img">
+          <figcaption class="character-photo__caption">Développeur Web</figcaption>
+        </figure>
+
+      </section>
 
       <section id="character-description" class="character-sheet__section">
 
@@ -67,7 +67,8 @@
           <li class="character-traits__item"><span class="character__sub-ttl">Âge : </span>41 ans</li>
           <li class="character-traits__item"><span class="character__sub-ttl">Race : </span>Humain</li>
           <li class="character-traits__item"><span class="character__sub-ttl">Classe : </span>Développeur Web</li>
-          <li class="character-traits__item"><span class="character__sub-ttl">Alignement : </span>Neutre à tendance amicale</li>
+          <li class="character-traits__item"><span class="character__sub-ttl">Alignement : </span>Neutre à tendance
+            amicale</li>
           <li class="character-traits__item"><span class="character__sub-ttl">Yeux : </span>Marron</li>
           <li class="character-traits__item"><span class="character__sub-ttl">Cheveux : </span>Blanc</li>
           <li class="character-traits__item"><span class="character__sub-ttl">XP : </span>Débutant</li>
@@ -75,16 +76,27 @@
 
       </section>
 
-      <section id="character-history" class="character-sheet__section">
-
-        <h2 class="character-sheet__title">Histoire</h2>
-
-        <p class="character-sheet__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae
-          lorem tristique volutpat.</p>
-
-      </section>
-
     </div>
+
+    <section id="character-history" class="character-sheet__section">
+
+      <h2 class="character-sheet__title">Histoire</h2>
+
+      <p class="character-sheet__text">Né au cœur de la Normandie, j'ai achevé fin 2024 une formation en Développement
+        Web et Web Mobile, suite à une reconversion professionnelle.</p>
+
+      <p class="character-sheet__text">En effet, après un long périple de 17 années dans un centre d'appel, j'ai
+        décidé de partir vers d'autres aventures. Désormais, je brandis fièrement mes outils de développeur pour
+        m'aventurer à travers les terres du numérique.</p>
+
+      <p class="character-sheet__text">Après avoir relevé plusieurs défis en solo ou en équipe, je continue de
+        perfectionner mes compétences afin de gagner des points d'expérience et bâtir des applications web solides et
+        performantes.</p>
+
+      <p class="character-sheet__text">En dehors du développement web, je ne délaisse pas ma curiosité et j'explore de
+        nombreux univers : mondes geek, spiritualité ou sciences.</p>
+
+    </section>
 
     <div class="character__container-section">
 
@@ -125,14 +137,70 @@
       <p class="character-sheet__text">Liste des projets (à compléter).</p>
 
     </section>
-
+    
     <section id="character-spells" class="character-sheet__section">
-
+      
       <h2 class="character-sheet__title">Sorts</h2>
-
+      
       <p class="character-sheet__text">Expériences professionnelles et formation (à compléter).</p>
 
+      <ul class="spells-list">
+    
+        <!--  Stage chez Impulse DLC -->
+        <li class="spell__item">
+          <div class="spell__details">
+            <h4 class="spell__title">Stage Développeur Web & Web Mobile</h4>
+            <h5 class="spell__place">Impulse DLC</h5>
+            <h6 class="spell__date">Date : À compléter</h6>
+          </div>
+          <ul class="spell__skills">
+            <li>Compétence 1 : À compléter</li>
+            <li>Compétence 2 : À compléter</li>
+          </ul>
+        </li>
+    
+        <!-- Formation Développeur Web -->
+        <li class="spell__item">
+          <div class="spell__details">
+            <h4 class="spell__title">Formation Développeur Web & Web Mobile</h4>
+            <h5 class="spell__place">Titre Professionnel Niveau 5</h5>
+            <h6 class="spell__date">Date : Fin 2024</h6>
+          </div>
+          <ul class="spell__skills">
+            <li>Technologies : HTML, CSS, JavaScript, PHP</li>
+            <li>Compétence : Création d'applications web</li>
+          </ul>
+        </li>
+    
+        <!-- DAEU Option A -->
+        <li class="spell__item">
+          <div class="spell__details">
+            <h4 class="spell__title">Équivalence DAEU Option A</h4>
+            <h5 class="spell__place">Formation Généraliste</h5>
+            <h6 class="spell__date">Date : À compléter</h6>
+          </div>
+          <ul class="spell__skills">
+            <li>Domaines : Littérature, Langues et Histoire</li>
+          </ul>
+        </li>
+    
+        <!-- Expérience chez Webhelp -->
+        <li class="spell__item">
+          <div class="spell__details">
+            <h4 class="spell__title">Expérience Professionnelle</h4>
+            <h5 class="spell__place">Webhelp</h5>
+            <h6 class="spell__date">Durée : 17 ans</h6>
+          </div>
+          <ul class="spell__skills">
+            <li>Compétence : Relation client, Communication</li>
+            <li>Adaptabilité, Gestion d'équipe</li>
+          </ul>
+        </li>
+    
+      </ul>
+    
     </section>
+    
 
   </main>
 
