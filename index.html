@@ -11,7 +11,7 @@
 
 <body>
 
-  <header class="header">
+  <header id="top" class="header">
 
     <div class="header__logo">
       <img src="img/logo-png.png" alt="Logo Mickael Blondeau">
@@ -45,7 +45,8 @@
 
     <section class="character-sheet__section character-photo">
 
-      <h1 class="character-photo__name">Blondeau Mickael</h1>
+      <h1 class="character-sheet__title">Personnage</h1>
+      <p class="character-sheet__text"><span class="character__sub-ttl">Nom : </span>Mickaël</p>
 
       <figure class="character-photo__figure">
         <img src="img/photo-mickael.jpg" alt="Photo de Mickael Blondeau" class="character-photo__img">
@@ -56,10 +57,7 @@
 
     <section id="character-history" class="character-sheet__section character-history">
 
-      <h2 class="character-sheet__title">Histoire du personnage</h2>
-
-      <p class="character-sheet__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae
-        lorem tristique volutpat.</p>
+      <h2 class="character-sheet__title">Description</h2>
 
       <ul class="character-traits">
         <li class="character-traits__item"><span class="character__sub-ttl">Âge : </span>41 ans</li>
@@ -70,6 +68,15 @@
         <li class="character-traits__item"><span class="character__sub-ttl">Cheveux : </span>Blanc</li>
         <li class="character-traits__item"><span class="character__sub-ttl">XP : </span>Débutant</li>
       </ul>
+
+    </section>
+
+    <section id="character-history" class="character-sheet__section character-history">
+
+      <h2 class="character-sheet__title">Histoire</h2>
+
+      <p class="character-sheet__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae
+        lorem tristique volutpat.</p>
 
     </section>
 
@@ -128,6 +135,11 @@
     </div>
 
   </footer>
+
+  <a href="#top" class="back-to-top" aria-label="Retour en haut de la page">
+    &#8679;
+  </a>
+
 
   <script src="js/main.js"></script>
 
