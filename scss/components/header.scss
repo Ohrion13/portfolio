@@ -13,7 +13,7 @@
   z-index: 1000;
 
   &.active {
-    margin-bottom: 8rem;
+    margin-bottom: 11.5rem;
   }
 
   &.fixed {
@@ -40,7 +40,7 @@
     justify-content: center;
 
     img {
-      max-width: 9.375rem;
+      max-width: 8rem;
       margin-bottom: 0;
 
       @include mixins.tablet {
@@ -98,6 +98,7 @@
       top: 10rem;
       left: 0;
       padding: 1.25rem;
+      text-align: center;
 
       &.active {
         display: flex;

@@ -26,6 +26,8 @@
       </button>
 
       <ul class="nav__list" aria-label="Menu de navigation">
+        <li class="nav__item"><a href="#character-description" class="nav__link"
+            aria-label="Description du personnage">Description</a></li>
         <li class="nav__item"><a href="#character-history" class="nav__link"
             aria-label="Histoire du personnage">Histoire</a></li>
         <li class="nav__item"><a href="#character-skills" class="nav__link" aria-label="Compétences">Compétences</a>
@@ -55,59 +57,68 @@
 
     </section>
 
-    <section id="character-history" class="character-sheet__section character-history">
+    <div class="character__container-section">
 
-      <h2 class="character-sheet__title">Description</h2>
+      <section id="character-description" class="character-sheet__section">
 
-      <ul class="character-traits">
-        <li class="character-traits__item"><span class="character__sub-ttl">Âge : </span>41 ans</li>
-        <li class="character-traits__item"><span class="character__sub-ttl">Race : </span>Humain</li>
-        <li class="character-traits__item"><span class="character__sub-ttl">Classe : </span>Développeur Web</li>
-        <li class="character-traits__item"><span class="character__sub-ttl">Alignement : </span>Neutre</li>
-        <li class="character-traits__item"><span class="character__sub-ttl">Yeux : </span>Marron</li>
-        <li class="character-traits__item"><span class="character__sub-ttl">Cheveux : </span>Blanc</li>
-        <li class="character-traits__item"><span class="character__sub-ttl">XP : </span>Débutant</li>
-      </ul>
+        <h2 class="character-sheet__title">Description</h2>
 
-    </section>
+        <ul class="character-traits">
+          <li class="character-traits__item"><span class="character__sub-ttl">Âge : </span>41 ans</li>
+          <li class="character-traits__item"><span class="character__sub-ttl">Race : </span>Humain</li>
+          <li class="character-traits__item"><span class="character__sub-ttl">Classe : </span>Développeur Web</li>
+          <li class="character-traits__item"><span class="character__sub-ttl">Alignement : </span>Neutre à tendance amicale</li>
+          <li class="character-traits__item"><span class="character__sub-ttl">Yeux : </span>Marron</li>
+          <li class="character-traits__item"><span class="character__sub-ttl">Cheveux : </span>Blanc</li>
+          <li class="character-traits__item"><span class="character__sub-ttl">XP : </span>Débutant</li>
+        </ul>
 
-    <section id="character-history" class="character-sheet__section character-history">
+      </section>
 
-      <h2 class="character-sheet__title">Histoire</h2>
+      <section id="character-history" class="character-sheet__section">
 
-      <p class="character-sheet__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae
-        lorem tristique volutpat.</p>
+        <h2 class="character-sheet__title">Histoire</h2>
 
-    </section>
+        <p class="character-sheet__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac magna vitae
+          lorem tristique volutpat.</p>
 
-    <section id="character-skills" class="character-sheet__section character-skills">
+      </section>
 
-      <h2 class="character-sheet__title">Compétences</h2>
+    </div>
 
-      <ul class="skills-list">
-        <li class="skills-list__item">HTML <span class="skills-list__icon acquired"></span></li>
-        <li class="skills-list__item">CSS & SCSS <span class="skills-list__icon acquired"></span></li>
-        <li class="skills-list__item">JavaScript <span class="skills-list__icon acquired"></span></li>
-        <li class="skills-list__item">PHP <span class="skills-list__icon acquired"></span></li>
-        <li class="skills-list__item">Laravel <span class="skills-list__icon acquired"></span></li>
-      </ul>
+    <div class="character__container-section">
 
-    </section>
+      <section id="character-skills" class="character-sheet__section">
 
-    <section id="character-proficiencies" class="character-sheet__section character-proficiencies">
+        <h2 class="character-sheet__title">Compétences</h2>
 
-      <h2 class="character-sheet__title">Autres maîtrises et langues</h2>
+        <ul class="skills-list">
+          <li class="skills-list__item">HTML <span class="skills-list__icon acquired"></span></li>
+          <li class="skills-list__item">CSS & SCSS <span class="skills-list__icon acquired"></span></li>
+          <li class="skills-list__item">JavaScript <span class="skills-list__icon acquired"></span></li>
+          <li class="skills-list__item">PHP <span class="skills-list__icon acquired"></span></li>
+          <li class="skills-list__item">Laravel <span class="skills-list__icon acquired"></span></li>
+        </ul>
 
-      <ul class="proficiencies-list">
-        <li class="proficiencies-list__item">GitHub <span class="proficiencies-list__icon acquired"></span></li>
-        <li class="proficiencies-list__item">Composer <span class="proficiencies-list__icon acquired"></span></li>
-        <li class="proficiencies-list__item">Docker <span class="proficiencies-list__icon acquired"></span></li>
-        <li class="proficiencies-list__item">Figma <span class="proficiencies-list__icon acquired"></span></li>
-      </ul>
+      </section>
 
-    </section>
+      <section id="character-proficiencies" class="character-sheet__section">
 
-    <section id="character-inventory" class="character-sheet__section character-inventory">
+        <h2 class="character-sheet__title">Autres maîtrises</h2>
+
+        <ul class="proficiencies-list">
+          <li class="proficiencies-list__item">GitHub <span class="proficiencies-list__icon acquired"></span></li>
+          <li class="proficiencies-list__item">Composer <span class="proficiencies-list__icon acquired"></span></li>
+          <li class="proficiencies-list__item">Docker <span class="proficiencies-list__icon acquired"></span></li>
+          <li class="proficiencies-list__item">Figma <span class="proficiencies-list__icon acquired"></span></li>
+        </ul>
+
+      </section>
+
+    </div>
+
+
+    <section id="character-inventory" class="character-sheet__section">
 
       <h2 class="character-sheet__title">Inventaire</h2>
 
@@ -115,7 +126,7 @@
 
     </section>
 
-    <section id="character-spells" class="character-sheet__section character-spells">
+    <section id="character-spells" class="character-sheet__section">
 
       <h2 class="character-sheet__title">Sorts</h2>
 

@@ -2,36 +2,58 @@
 @use '../mixins' as mixins;
 
 .character-sheet {
+
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/medium5.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mixins.mobile {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/medium5.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+}
+
+.character__container-section {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 1.25rem;
+  gap: 1.25rem;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
-
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/medium9.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   @include mixins.tablet {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
+    padding: 0.75rem 0;
+  }
+
+  @include mixins.desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.25rem 0;
   }
 }
 
 .character-sheet__section {
   padding: 1.25rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 
   @include mixins.tablet {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  @include mixins.desktop {
     flex: 1 1 calc(50% - 1rem);
   }
 }
