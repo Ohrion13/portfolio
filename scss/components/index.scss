@@ -1,61 +1,64 @@
 @use '../var' as *;
 @use '../mixins' as mixins;
 
-.character-sheet {
+.index {
 
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/background.webp');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: flex-start;
 
-  @include mixins.mobile {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/background.webp');
+    @include mixins.tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 0.75rem 0;
+    }
+
+    @include mixins.desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 1.25rem 0;
+    }
+  }
+
+  &__section {
+    padding: 1.25rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include mixins.tablet {
+      flex: 1 1 calc(50% - 1rem);
+    }
+
+    @include mixins.desktop {
+      flex: 1 1 calc(50% - 1rem);
+    }
+  }
+
+  &__character-sheet {
+
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/background.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include mixins.mobile {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/background.webp');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 
-}
-
-.character__container-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  align-items: center;
-  justify-content: flex-start;
-
-  @include mixins.tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 0.75rem 0;
-  }
-
-  @include mixins.desktop {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 1.25rem 0;
-  }
-}
-
-.character-sheet__section {
-  padding: 1.25rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-
-  @include mixins.tablet {
-    flex: 1 1 calc(50% - 1rem);
-  }
-
-  @include mixins.desktop {
-    flex: 1 1 calc(50% - 1rem);
-  }
 }
 
 .back-to-top {

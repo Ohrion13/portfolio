@@ -153,22 +153,7 @@ html {
   }
 }
 
-.character-sheet {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/background.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media (max-width: 768px) {
-  .character-sheet {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/background.webp");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-}
-
-.character__container-section {
+.index__container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -177,7 +162,7 @@ html {
   justify-content: flex-start;
 }
 @media (min-width: 768px) {
-  .character__container-section {
+  .index__container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -186,7 +171,7 @@ html {
   }
 }
 @media (min-width: 1024px) {
-  .character__container-section {
+  .index__container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -194,8 +179,7 @@ html {
     padding: 1.25rem 0;
   }
 }
-
-.character-sheet__section {
+.index__section {
   padding: 1.25rem;
   width: 100%;
   max-width: 1200px;
@@ -203,13 +187,27 @@ html {
   text-align: center;
 }
 @media (min-width: 768px) {
-  .character-sheet__section {
+  .index__section {
     flex: 1 1 calc(50% - 1rem);
   }
 }
 @media (min-width: 1024px) {
-  .character-sheet__section {
+  .index__section {
     flex: 1 1 calc(50% - 1rem);
+  }
+}
+.index__character-sheet {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/background.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .index__character-sheet {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/background.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -241,52 +239,36 @@ html {
   }
 }
 
-.character-sheet__section.character-photo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.character-photo__img {
-  color: #FFFFFF;
+.character__img {
   width: 60%;
   height: auto;
   margin-bottom: 1rem;
 }
 @media (max-width: 768px) {
-  .character-photo__img {
+  .character__img {
     width: 45%;
   }
 }
 @media (min-width: 1024px) {
-  .character-photo__img {
+  .character__img {
     width: 45%;
   }
 }
 
-.character-photo__caption {
-  font-size: 1rem;
-  color: #FFFFFF;
-}
-
-.character-sheet__title {
+.presentation__ttl {
   font-family: "Press Start 2P", cursive;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 1rem;
   color: #FFD700;
 }
-
-.character-sheet__text {
+.presentation__txt {
   text-align: center;
   margin-bottom: 1rem;
   line-height: 1.6;
   color: #FFFFFF;
 }
-
-.character-traits {
+.presentation__character {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -294,18 +276,17 @@ html {
   padding: 0;
   justify-content: space-around;
 }
-.character-traits__item {
+.presentation__item {
   font-weight: bold;
   font-size: 1rem;
   color: #FFFFFF;
 }
-
-.character__sub-ttl {
+.presentation__sub-ttl {
   color: #E6A700;
 }
 
 .skills-list,
-.proficiencies-list {
+.mastery-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -314,7 +295,7 @@ html {
   justify-content: space-around;
 }
 .skills-list__item,
-.proficiencies-list__item {
+.mastery-list__item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -322,7 +303,7 @@ html {
   color: #FFFFFF;
 }
 .skills-list__icon,
-.proficiencies-list__icon {
+.mastery-list__icon {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -330,7 +311,7 @@ html {
   border: 2px solid #B22222;
 }
 .skills-list__icon.acquired,
-.proficiencies-list__icon.acquired {
+.mastery-list__icon.acquired {
   background-color: #E6A700;
 }
 
