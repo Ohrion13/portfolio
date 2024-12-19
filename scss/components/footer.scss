@@ -15,20 +15,16 @@
 
   &__social-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 1.25rem;
     margin-top: 1rem;
+  }
 
-    .footer__social-link {
-      color: $text-color;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-
-      &:hover {
-        color: $title-color;
-      }
+  &__link {
+    &:hover {
+      opacity: 0.5;
     }
   }
+
 }
