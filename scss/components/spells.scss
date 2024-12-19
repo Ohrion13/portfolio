@@ -1,0 +1,48 @@
+@use '../var' as *;
+@use '../mixins' as mixins;
+
+.spell {
+
+    &__item {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6rem;
+        padding: 0.5rem 0;
+        margin-bottom: 2rem;
+        border: 1px solid $title-color;
+        border-radius: 1rem;
+
+        @include mixins.mobile {
+            gap: 2rem;
+          }
+
+          &:hover {
+            border: 2px solid $text-color;
+            font-weight: bold;
+            background-color: $primary-opacity;
+          }
+    }
+
+    &__details {
+        text-align: left;
+    }
+
+    &__subttl {
+        color: $subtitle-color;
+        margin-bottom: 0.5rem;
+    }
+
+    &__text {
+        color: $text-color;
+        margin-bottom: 0.5rem;
+    }
+    
+    &__position {
+        margin-left: 2rem;
+
+        @include mixins.mobile {
+            margin-left: 0;
+          }
+    }
+}

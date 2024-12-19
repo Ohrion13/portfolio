@@ -34,9 +34,9 @@
         </li>
         <li class="nav__item"><a href="#character-proficiencies" class="nav__link"
             aria-label="Maîtrises et Langues">Autres maîtrises</a></li>
-        <li class="nav__item"><a href="#character-inventory" class="nav__link" aria-label="Inventaire">Inventaire</a>
+        <li class="nav__item"><a href="#character-inventory" class="nav__link" aria-label="Journal de quêtes">Journal de quêtes</a>
         </li>
-        <li class="nav__item"><a href="#character-spells" class="nav__link" aria-label="Sorts">Sorts</a></li>
+        <li class="nav__item"><a href="#character-spells" class="nav__link" aria-label="Inventaire">Inventaire</a></li>
       </ul>
 
     </nav>
@@ -49,13 +49,9 @@
 
       <section class="character-sheet__section character-photo">
 
-        <h1 class="character-sheet__title">Personnage</h1>
         <p class="character-sheet__text"><span class="character__sub-ttl">Nom : </span>Mickaël</p>
 
-        <figure class="character-photo__figure">
-          <img src="img/photo-mickael.jpg" alt="Photo de Mickael Blondeau" class="character-photo__img">
-          <figcaption class="character-photo__caption">Développeur Web</figcaption>
-        </figure>
+        <img class="character-photo__img" src="img/photo-mickael.jpg" alt="Photo de Mickael Blondeau">
 
       </section>
 
@@ -132,75 +128,81 @@
 
     <section id="character-inventory" class="character-sheet__section">
 
+      <h2 class="character-sheet__title">Journal de quêtes</h2>
+
+      <p class="character-sheet__text">Liste des projets (à venir).</p>
+
+    </section>
+
+    <section id="character-spells" class="character-sheet__section">
+
       <h2 class="character-sheet__title">Inventaire</h2>
 
-      <p class="character-sheet__text">Liste des projets (à compléter).</p>
+      <ul>
 
-    </section>
-    
-    <section id="character-spells" class="character-sheet__section">
-      
-      <h2 class="character-sheet__title">Sorts</h2>
-      
-      <p class="character-sheet__text">Expériences professionnelles et formation (à compléter).</p>
-
-      <ul class="spells-list">
-    
-        <!--  Stage chez Impulse DLC -->
-        <li class="spell__item">
-          <div class="spell__details">
-            <h4 class="spell__title">Stage Développeur Web & Web Mobile</h4>
-            <h5 class="spell__place">Impulse DLC</h5>
-            <h6 class="spell__date">Date : À compléter</h6>
-          </div>
-          <ul class="spell__skills">
-            <li>Compétence 1 : À compléter</li>
-            <li>Compétence 2 : À compléter</li>
-          </ul>
-        </li>
-    
         <!-- Formation Développeur Web -->
         <li class="spell__item">
-          <div class="spell__details">
-            <h4 class="spell__title">Formation Développeur Web & Web Mobile</h4>
-            <h5 class="spell__place">Titre Professionnel Niveau 5</h5>
-            <h6 class="spell__date">Date : Fin 2024</h6>
+          <div>
+            <h3 class="spell__subttl">Formation Développeur Web & Web Mobile</h3>
+            <p class="spell__text">Titre Professionnel Niveau 5</p>
+            <p class="spell__text">Obtenu le : 12 Novembre 2024</p>
           </div>
-          <ul class="spell__skills">
-            <li>Technologies : HTML, CSS, JavaScript, PHP</li>
-            <li>Compétence : Création d'applications web</li>
-          </ul>
+          <div class="spell__details">
+            <H5 class="spell__subttl">Langages informatiques :</H5>
+            <p class="spell__text spell__position">- HTML, CSS, JavaScript, PHP, MySQL.</p>
+            <H5 class="spell__subttl">Compétence :</H5>
+            <p class="spell__text spell__position">- Création d'applications web</p>
+          </div>
         </li>
-    
+
+        <!--  Stage chez Impulse DLC -->
+        <li class="spell__item">
+          <div>
+            <h3 class="spell__subttl">Stage de Développeur</h3>
+            <p class="spell__text">Impulse DLC</p>
+            <p class="spell__text">du 26 Aout 2024 au 04 Novembre 2024</p>
+          </div>
+          <div class="spell__details">
+            <H5 class="spell__subttl">Compétences acquises :</h5>
+            <p class="spell__text spell__position">- Travail en autonomie,</p>
+            <p class="spell__text spell__position">- À compléter.</p>
+          </div>
+        </li>
+
         <!-- DAEU Option A -->
         <li class="spell__item">
-          <div class="spell__details">
-            <h4 class="spell__title">Équivalence DAEU Option A</h4>
-            <h5 class="spell__place">Formation Généraliste</h5>
-            <h6 class="spell__date">Date : À compléter</h6>
+          <div>
+            <h3 class="spell__subttl">Diplôme DAEU Option A</h3>
+            <p class="spell__text">Diplôme Niveau 4</p>
+            <p class="spell__text">Obtenu le : 03 Octobre 2023</p>
           </div>
-          <ul class="spell__skills">
-            <li>Domaines : Littérature, Langues et Histoire</li>
-          </ul>
+          <div class="spell__details">
+            <H5 class="spell__subttl">Domaines :</h5>
+            <p class="spell__text spell__position">- Francais, Anglais.</p>
+            <p class="spell__text spell__position">- Histoire et Geographie.</p>
+          </div>
         </li>
-    
+
         <!-- Expérience chez Webhelp -->
         <li class="spell__item">
-          <div class="spell__details">
-            <h4 class="spell__title">Expérience Professionnelle</h4>
-            <h5 class="spell__place">Webhelp</h5>
-            <h6 class="spell__date">Durée : 17 ans</h6>
+          <div>
+            <h3 class="spell__subttl">Expérience Professionnelle</h3>
+            <p class="spell__text">Webhelp</p>
+            <p class="spell__text">de Février 2006 à Novembre 2023</p>
           </div>
-          <ul class="spell__skills">
-            <li>Compétence : Relation client, Communication</li>
-            <li>Adaptabilité, Gestion d'équipe</li>
-          </ul>
+          <div class="spell__details">
+            <H5 class="spell__subttl">Compétences acquises :</h5>
+            <p class="spell__text spell__position">- Relation client,</p>
+            <p class="spell__text spell__position">- Communication,</p>
+            <p class="spell__text spell__position">- Adaptabilité,</p>
+            <p class="spell__text spell__position">- Patience.</p>
+          </div>
         </li>
-    
+
       </ul>
-    
+
     </section>
-    
+
 
   </main>
 

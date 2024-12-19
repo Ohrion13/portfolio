@@ -10,16 +10,9 @@
 
 }
 
-.character-photo__figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .character-photo__img {
   color: $text-color;
-  width: 100%;
+  width: 60%;
   height: auto;
   margin-bottom: 1rem;
 }

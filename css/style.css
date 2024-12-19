@@ -249,16 +249,9 @@ html {
   text-align: center;
 }
 
-.character-photo__figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .character-photo__img {
   color: #FFFFFF;
-  width: 100%;
+  width: 60%;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -329,6 +322,46 @@ html {
 .skills-list__icon.acquired,
 .proficiencies-list__icon.acquired {
   background-color: #E6A700;
+}
+
+.spell__item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6rem;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  border: 1px solid #FFD700;
+  border-radius: 1rem;
+}
+@media (max-width: 768px) {
+  .spell__item {
+    gap: 2rem;
+  }
+}
+.spell__item:hover {
+  border: 2px solid #FFFFFF;
+  font-weight: bold;
+  background-color: rgba(22, 16, 35, 0.4);
+}
+.spell__details {
+  text-align: left;
+}
+.spell__subttl {
+  color: #E6A700;
+  margin-bottom: 0.5rem;
+}
+.spell__text {
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+.spell__position {
+  margin-left: 2rem;
+}
+@media (max-width: 768px) {
+  .spell__position {
+    margin-left: 0;
+  }
 }
 
 .footer {
