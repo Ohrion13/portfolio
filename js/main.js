@@ -20,7 +20,7 @@ function smoothScroll() {
  */
 function handleSectionVisibility() {
 
-  const sections = document.querySelectorAll(".index__section");
+  const sections = document.querySelectorAll(".animate-right, .animate-left, .animate-bottom");
 
   const observer = new IntersectionObserver(
 
@@ -29,28 +29,92 @@ function handleSectionVisibility() {
       entries.forEach((entry) => {
 
         if (entry.isIntersecting) {
-          entry.target.style.opacity = "1";
-          entry.target.style.transform = "translateX(0)";
-          entry.target.style.transition = "opacity 0.5s, transform 0.5s";
+
+          if (!entry.target.classList.contains('animated-in')) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transition = "opacity 1s ease";
+
+            if (entry.target.classList.contains("animate-right")) {
+              entry.target.style.transform = "translateX(100%)";
+
+              setTimeout(() => {
+                entry.target.style.transition = "transform 1s ease";
+                entry.target.style.transform = "translateX(0)";
+                entry.target.classList.add('animated-in');
+              }, 50);
+
+            } else if (entry.target.classList.contains("animate-left")) {
+              entry.target.style.transform = "translateX(-100%)";
+
+              setTimeout(() => {
+                entry.target.style.transition = "transform 1s ease";
+                entry.target.style.transform = "translateX(0)";
+                entry.target.classList.add('animated-in');
+              }, 50);
+
+            } else if (entry.target.classList.contains("animate-bottom")) {
+              entry.target.style.transform = "translateY(100%)";
+
+              setTimeout(() => {
+                entry.target.style.transition = "transform 1s ease";
+                entry.target.style.transform = "translateY(0)";
+                entry.target.classList.add('animated-in');
+              }, 50);
+            }
+          }
 
         } else {
-          entry.target.style.opacity = "0";
-          entry.target.style.transform = "translateX(-100%)";
+
+          if (entry.target.classList.contains('animated-in')) {
+
+            entry.target.style.transition = "transform 1s ease, opacity 1s ease";
+
+            if (entry.target.classList.contains("animate-right")) {
+              entry.target.style.transform = "translateX(100%)";
+
+              setTimeout(() => {
+                entry.target.style.opacity = "0";
+                entry.target.style.transform = "translateX(0)";
+              }, 50);
+
+            } else if (entry.target.classList.contains("animate-left")) {
+
+              entry.target.style.transform = "translateX(-100%)";
+
+              setTimeout(() => {
+                entry.target.style.opacity = "0";
+                entry.target.style.transform = "translateX(0)";
+              }, 50);
+
+            } else if (entry.target.classList.contains("animate-bottom")) {
+
+              entry.target.style.transform = "translateY(100%)";
+
+              setTimeout(() => {
+                entry.target.style.opacity = "0";
+                entry.target.style.transform = "translateY(0)";
+              }, 50);
+            }
+
+            setTimeout(() => {
+              entry.target.classList.remove('animated-in');
+            }, 1000);
+          }
         }
       });
     },
     {
-      threshold: 0.8,
+      threshold: 0.6,
     }
   );
 
   sections.forEach((section) => {
-    section.style.opacity = 0; // S'assurer que la section est invisible au départ
-    section.style.transform = "translateX(-100%)"; // ou translateX(100%) si tu préfères de l'autre côté
-
     observer.observe(section);
   });
 }
+
+
 
 
 /**
@@ -94,6 +158,6 @@ function calculateAge() {
 
 
 smoothScroll();
-// handleSectionVisibility();
+handleSectionVisibility();
 toggleBurgerMenu();
 calculateAge();
