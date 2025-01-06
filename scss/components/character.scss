@@ -9,11 +9,11 @@
     margin-bottom: 1rem;
   
     @include mixins.mobile {
-      width: 45%;
+      width: 42%;
     }
   
     @include mixins.desktop {
-      width: 45%;
+      width: 40%;
     }
   }
 }

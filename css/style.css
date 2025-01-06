@@ -246,12 +246,12 @@ html {
 }
 @media (max-width: 768px) {
   .character__img {
-    width: 45%;
+    width: 42%;
   }
 }
 @media (min-width: 1024px) {
   .character__img {
-    width: 45%;
+    width: 40%;
   }
 }
 
