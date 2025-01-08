@@ -16,7 +16,7 @@ function smoothScroll() {
 
 /**
  * Visibility effect for sections on scroll.
- * Adds the 'visible' class to sections when they come into view as the user scrolls.
+ * Animates sections with specific classes as they enter or leave the viewport.
  */
 function handleSectionVisibility() {
 
@@ -68,30 +68,31 @@ function handleSectionVisibility() {
 
           if (entry.target.classList.contains('animated-in')) {
 
-            entry.target.style.transition = "transform 1s ease, opacity 1s ease";
+            entry.target.style.transition = "transform 1s ease";
 
             if (entry.target.classList.contains("animate-right")) {
               entry.target.style.transform = "translateX(100%)";
 
               setTimeout(() => {
+                entry.target.style.transition = "opacity 1s ease";
                 entry.target.style.opacity = "0";
                 entry.target.style.transform = "translateX(0)";
               }, 50);
 
             } else if (entry.target.classList.contains("animate-left")) {
-
               entry.target.style.transform = "translateX(-100%)";
 
               setTimeout(() => {
+                entry.target.style.transition = "opacity 1s ease";
                 entry.target.style.opacity = "0";
                 entry.target.style.transform = "translateX(0)";
               }, 50);
 
             } else if (entry.target.classList.contains("animate-bottom")) {
-
               entry.target.style.transform = "translateY(100%)";
 
               setTimeout(() => {
+                entry.target.style.transition = "opacity 1s ease";
                 entry.target.style.opacity = "0";
                 entry.target.style.transform = "translateY(0)";
               }, 50);
@@ -99,13 +100,13 @@ function handleSectionVisibility() {
 
             setTimeout(() => {
               entry.target.classList.remove('animated-in');
-            }, 1000);
+            }, 500);
           }
         }
       });
     },
     {
-      threshold: 0.6,
+      threshold: 0.8,
     }
   );
 
@@ -113,8 +114,6 @@ function handleSectionVisibility() {
     observer.observe(section);
   });
 }
-
-
 
 
 /**
