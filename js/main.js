@@ -19,99 +19,99 @@ function smoothScroll() {
  * Animates sections with specific classes as they enter or leave the viewport.
  */
 function handleSectionVisibility() {
+  const sections = document.querySelectorAll(".animate-bottom, .animate-right, .animate-left");
 
-  const sections = document.querySelectorAll(".animate-right, .animate-left, .animate-bottom");
-
-  const observer = new IntersectionObserver(
+  const entryObserver = new IntersectionObserver(
 
     (entries) => {
 
       entries.forEach((entry) => {
 
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !entry.target.classList.contains("animated-in")) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transition = "opacity 1s ease";
 
-          if (!entry.target.classList.contains('animated-in')) {
-
-            entry.target.style.opacity = "1";
-            entry.target.style.transition = "opacity 1s ease";
-
-            if (entry.target.classList.contains("animate-right")) {
-              entry.target.style.transform = "translateX(100%)";
-
-              setTimeout(() => {
-                entry.target.style.transition = "transform 1s ease";
-                entry.target.style.transform = "translateX(0)";
-                entry.target.classList.add('animated-in');
-              }, 50);
-
-            } else if (entry.target.classList.contains("animate-left")) {
-              entry.target.style.transform = "translateX(-100%)";
-
-              setTimeout(() => {
-                entry.target.style.transition = "transform 1s ease";
-                entry.target.style.transform = "translateX(0)";
-                entry.target.classList.add('animated-in');
-              }, 50);
-
-            } else if (entry.target.classList.contains("animate-bottom")) {
-              entry.target.style.transform = "translateY(100%)";
-
-              setTimeout(() => {
-                entry.target.style.transition = "transform 1s ease";
-                entry.target.style.transform = "translateY(0)";
-                entry.target.classList.add('animated-in');
-              }, 50);
-            }
-          }
-
-        } else {
-
-          if (entry.target.classList.contains('animated-in')) {
-
-            entry.target.style.transition = "transform 1s ease";
-
-            if (entry.target.classList.contains("animate-right")) {
-              entry.target.style.transform = "translateX(100%)";
-
-              setTimeout(() => {
-                entry.target.style.transition = "opacity 1s ease";
-                entry.target.style.opacity = "0";
-                entry.target.style.transform = "translateX(0)";
-              }, 50);
-
-            } else if (entry.target.classList.contains("animate-left")) {
-              entry.target.style.transform = "translateX(-100%)";
-
-              setTimeout(() => {
-                entry.target.style.transition = "opacity 1s ease";
-                entry.target.style.opacity = "0";
-                entry.target.style.transform = "translateX(0)";
-              }, 50);
-
-            } else if (entry.target.classList.contains("animate-bottom")) {
-              entry.target.style.transform = "translateY(100%)";
-
-              setTimeout(() => {
-                entry.target.style.transition = "opacity 1s ease";
-                entry.target.style.opacity = "0";
-                entry.target.style.transform = "translateY(0)";
-              }, 50);
-            }
+          if (entry.target.classList.contains("animate-bottom")) {
+            entry.target.style.transform = "translateY(100%)";
 
             setTimeout(() => {
-              entry.target.classList.remove('animated-in');
-            }, 500);
+              entry.target.style.transition = "transform 1s ease";
+              entry.target.style.transform = "translateY(0)";
+              entry.target.classList.add("animated-in");
+            }, 50);
+
+          } else if (entry.target.classList.contains("animate-left")) {
+            entry.target.style.transform = "translateX(-100%)";
+
+            setTimeout(() => {
+              entry.target.style.transition = "transform 1s ease";
+              entry.target.style.transform = "translateX(0)";
+              entry.target.classList.add("animated-in");
+            }, 50);
+
+          } else if (entry.target.classList.contains("animate-right")) {
+            entry.target.style.transform = "translateX(100%)";
+
+            setTimeout(() => {
+              entry.target.style.transition = "transform 1s ease";
+              entry.target.style.transform = "translateX(0)";
+              entry.target.classList.add("animated-in");
+            }, 50);
           }
         }
       });
     },
-    {
-      threshold: 0.8,
-    }
+    { threshold: 0.7 }
+  );
+
+  const exitObserver = new IntersectionObserver(
+
+    (entries) => {
+      entries.forEach((entry) => {
+
+        if (!entry.isIntersecting && entry.target.classList.contains("animated-in")) {
+          entry.target.style.transition = "transform 1s ease";
+
+          if (entry.target.classList.contains("animate-bottom")) {
+            entry.target.style.transform = "translateY(100%)";
+
+            setTimeout(() => {
+              entry.target.style.transition = "opacity 1s ease";
+              entry.target.style.opacity = "0";
+              entry.target.style.transform = "translateY(0)";
+            }, 50);
+
+          } else if (entry.target.classList.contains("animate-left")) {
+            entry.target.style.transform = "translateX(-100%)";
+
+            setTimeout(() => {
+              entry.target.style.transition = "opacity 1s ease";
+              entry.target.style.opacity = "0";
+              entry.target.style.transform = "translateX(0)";
+            }, 50);
+
+          } else if (entry.target.classList.contains("animate-right")) {
+            entry.target.style.transform = "translateX(100%)";
+
+            setTimeout(() => {
+              entry.target.style.transition = "opacity 1s ease";
+              entry.target.style.opacity = "0";
+              entry.target.style.transform = "translateX(0)";
+            }, 50);
+          }
+
+          setTimeout(() => {
+            entry.target.classList.remove("animated-in");
+          }, 500);
+        }
+      });
+    },
+    { threshold: 0.2 }
   );
 
   sections.forEach((section) => {
-    observer.observe(section);
+    entryObserver.observe(section);
+    exitObserver.observe(section);
   });
 }
 
