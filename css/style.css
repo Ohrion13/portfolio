@@ -71,6 +71,9 @@ html {
   max-width: 9rem;
   margin-bottom: 0;
 }
+.header__logo img:hover {
+  opacity: 0.5;
+}
 @media (min-width: 768px) {
   .header__logo img {
     margin-bottom: 2rem;
