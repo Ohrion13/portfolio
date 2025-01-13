@@ -67,7 +67,7 @@ html {
   justify-content: center;
 }
 .header__logo img {
-  max-width: 8rem;
+  max-width: 9rem;
   margin-bottom: 0;
 }
 @media (min-width: 768px) {

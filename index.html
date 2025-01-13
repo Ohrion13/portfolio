@@ -4,22 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Mickael Blondeau, Développeur Full Stack à Caen">
+  <meta name="author" content="Mickael Blondeau">
+  <meta name="keywords" content="Portfolio de Mickael Blondeau, Développeur Full Stack à Caen">
+  <meta property="og:url" content="https://mblondeau-developpement.fr">
   <title>Portfolio Mickael Blondeau</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header id="top" class="header">
+  <header id="top" class="header" role="banner">
 
-    <div class="header__logo">
-      <img src="img/Logo 7.jpg" alt="Logo Mickael Blondeau">
+    <div class="header__logo" aria-labelledby="site-logo">
+      <img src="img/Logo 7.jpg" alt="Logo Portfolio Mickael Blondeau" id="site-logo">
     </div>
 
-    <nav class="nav" role="navigation">
+    <nav class="nav" role="navigation" aria-label="Menu principal">
 
-      <button class="nav__burger" aria-label="Ouvrir le menu">
+      <button class="nav__burger" aria-label="Ouvrir ou fermer le menu">
         <span class="nav__burger-line" aria-hidden="true"></span>
         <span class="nav__burger-line" aria-hidden="true"></span>
         <span class="nav__burger-line" aria-hidden="true"></span>
@@ -27,40 +29,45 @@
 
       <ul class="nav__list" aria-label="Menu de navigation">
         <li class="nav__item"><a href="#character-description" class="nav__link"
-            aria-label="Description du personnage">Description</a></li>
+            aria-label="Description du developpeur web">Description</a></li>
         <li class="nav__item"><a href="#character-history" class="nav__link"
-            aria-label="Histoire du personnage">Histoire</a></li>
-        <li class="nav__item"><a href="#character-skills" class="nav__link" aria-label="Compétences">Compétences</a>
+            aria-label="Histoire du developpeur">Histoire</a></li>
+        <li class="nav__item"><a href="#character-skills" class="nav__link"
+            aria-label="Compétences developpeur">Compétences</a>
         </li>
         <li class="nav__item"><a href="#character-proficiencies" class="nav__link"
-            aria-label="Maîtrises et Langues">Autres maîtrises</a></li>
-        <li class="nav__item"><a href="#character-quest" class="nav__link" aria-label="Journal de quêtes">Journal de quêtes</a>
+            aria-label="Technologies maitrisées par le developpeur web">Autres maîtrises</a></li>
+        <li class="nav__item"><a href="#character-quest" class="nav__link"
+            aria-label="Autres sites web du developpeur">Journal de quêtes</a>
         </li>
-        <li class="nav__item"><a href="#character-inventory" class="nav__link" aria-label="Inventaire">Inventaire</a></li>
+        <li class="nav__item"><a href="#character-inventory" class="nav__link"
+            aria-label="Parcours Professionnel et diplomes du developpeur">Inventaire</a></li>
       </ul>
 
     </nav>
 
   </header>
 
-  <main class="index__character-sheet">
+  <main class="index__character-sheet" role="main">
 
     <div class="index__container">
 
-      <section class="index__section character-photo animate-left">
+      <section class="index__section character-photo animate-left" role="region" aria-labelledby="titre-presentation">
 
-        <p class="presentation__txt"><span class="presentation__sub-ttl">Nom : </span>Mickaël</p>
+        <h1 class="presentation__txt" id="titre-presentation"><span class="presentation__sub-ttl">Nom : </span>Mickaël
+        </h1>
 
-        <img class="character__img" src="img/photo5.jpg" alt="Photo de Mickael Blondeau">
+        <img class="character__img" src="img/photo5.jpg" alt="Photo Mickael Blondeau">
 
       </section>
 
-      <section id="character-description" class="index__section animate-right">
+      <section id="character-description" class="index__section animate-right" role="region" aria-labelledby="titre-description">
 
-        <h2 class="presentation__ttl">Description</h2>
+        <h2 class="presentation__ttl" id="titre-description">Description</h2>
 
         <ul class="presentation__character">
-          <li class="presentation__item"><span class="presentation__sub-ttl">Âge : </span><span id="age"></span> ans</li>
+          <li class="presentation__item"><span class="presentation__sub-ttl">Âge : </span><span id="age"></span> ans
+          </li>
           <li class="presentation__item"><span class="presentation__sub-ttl">Race : </span>Humain</li>
           <li class="presentation__item"><span class="presentation__sub-ttl">Classe : </span>Développeur Web</li>
           <li class="presentation__item"><span class="presentation__sub-ttl">Alignement : </span>Neutre à tendance
@@ -74,9 +81,9 @@
 
     </div>
 
-    <section id="character-history" class="index__section animate-left">
+    <section id="character-history" class="index__section animate-left" role="region" aria-labelledby="titre-histoire">
 
-      <h2 class="presentation__ttl">Histoire</h2>
+      <h2 class="presentation__ttl" id="titre-histoire">Histoire</h2>
 
       <p class="presentation__txt">Né au cœur de la Normandie, j'ai achevé fin 2024 une formation en Développement
         Web et Web Mobile, suite à une reconversion professionnelle.</p>
@@ -96,29 +103,38 @@
 
     <div class="index__container">
 
-      <section id="character-skills" class="index__section animate-left">
+      <section id="character-skills" class="index__section animate-left" role="region" aria-labelledby="titre-compétences">
 
-        <h2 class="presentation__ttl">Compétences</h2>
+        <h2 class="presentation__ttl" id="titre-compétences">Compétences</h2>
 
         <ul class="skills-list">
-          <li class="skills-list__item">HTML <span class="skills-list__icon acquired"></span></li>
-          <li class="skills-list__item">CSS & SCSS <span class="skills-list__icon acquired"></span></li>
-          <li class="skills-list__item">JavaScript <span class="skills-list__icon acquired"></span></li>
-          <li class="skills-list__item">PHP <span class="skills-list__icon acquired"></span></li>
-          <li class="skills-list__item">Laravel <span class="skills-list__icon acquired"></span></li>
+          <li class="skills-list__item">HTML <span class="skills-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
+          <li class="skills-list__item">CSS & SCSS <span class="skills-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
+          <li class="skills-list__item">JavaScript <span class="skills-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
+          <li class="skills-list__item">PHP <span class="skills-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
+          <li class="skills-list__item">Laravel <span class="skills-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
         </ul>
 
       </section>
 
-      <section id="character-proficiencies" class="index__section animate-right">
+      <section id="character-proficiencies" class="index__section animate-right" role="region" aria-labelledby="titre-technologies">
 
-        <h2 class="presentation__ttl">Autres maîtrises</h2>
+        <h2 class="presentation__ttl" id="titre-technologies">Autres maîtrises</h2>
 
         <ul class="mastery-list">
-          <li class="mastery-list__item">GitHub <span class="mastery-list__icon acquired"></span></li>
-          <li class="mastery-list__item">Composer <span class="mastery-list__icon acquired"></span></li>
-          <li class="mastery-list__item">Docker <span class="mastery-list__icon acquired"></span></li>
-          <li class="mastery-list__item">Figma <span class="mastery-list__icon acquired"></span></li>
+          <li class="mastery-list__item">GitHub <span class="mastery-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
+          <li class="mastery-list__item">Composer <span class="mastery-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
+          <li class="mastery-list__item">Docker <span class="mastery-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
+          <li class="mastery-list__item">Figma <span class="mastery-list__icon acquired"
+              aria-label="Compétence acquise"></span></li>
         </ul>
 
       </section>
@@ -126,72 +142,72 @@
     </div>
 
 
-    <section id="character-quest" class="index__section animate-right">
+    <section id="character-quest" class="index__section animate-right" role="region" aria-labelledby="titre-quêtes">
 
-      <h2 class="presentation__ttl">Journal de quêtes</h2>
+      <h2 class="presentation__ttl" id="titre-quêtes">Journal de quêtes</h2>
 
       <p class="presentation__txt">Liste des projets (à venir).</p>
 
     </section>
 
-    <section id="character-inventory" class="index__section">
+    <section id="character-inventory" class="index__section" role="region" aria-labelledby="titre-inventaire">
 
-      <h2 class="presentation__ttl animate-bottom">Inventaire</h2>
+      <h2 class="presentation__ttl animate-bottom" id="titre-inventaire">Inventaire</h2>
 
-      <ul>
+      <ul role="list">
 
         <!-- Formation Développeur Web -->
-        <li class="spell__item animate-left">
+        <li class="spell__item animate-left" role="listitem">
           <div>
             <h3 class="spell__subttl">Formation Développeur Web & Web Mobile</h3>
             <p class="spell__text">Titre Professionnel Niveau 5</p>
             <p class="spell__text">Obtenu le : 12 Novembre 2024</p>
           </div>
           <div class="spell__details">
-            <H5 class="spell__subttl">Langages informatiques :</H5>
+            <h4 class="spell__subttl">Langages informatiques :</h4>
             <p class="spell__text spell__position">- HTML, CSS, JavaScript, PHP, MySQL.</p>
-            <H5 class="spell__subttl">Compétence :</H5>
+            <h4 class="spell__subttl">Compétence :</h4>
             <p class="spell__text spell__position">- Création d'applications web</p>
           </div>
         </li>
 
         <!--  Stage chez Impulse DLC -->
-        <li class="spell__item animate-right">
+        <li class="spell__item animate-right" role="listitem">
           <div>
             <h3 class="spell__subttl">Stage de Développeur</h3>
             <p class="spell__text">Impulse DLC</p>
             <p class="spell__text">du 26 Aout 2024 au 04 Novembre 2024</p>
           </div>
           <div class="spell__details">
-            <H5 class="spell__subttl">Compétences acquises :</h5>
+            <h4 class="spell__subttl">Compétences acquises :</h4>
             <p class="spell__text spell__position">- Travail en autonomie,</p>
             <p class="spell__text spell__position">- À compléter.</p>
           </div>
         </li>
 
         <!-- DAEU Option A -->
-        <li class="spell__item animate-left">
+        <li class="spell__item animate-left" role="listitem">
           <div>
             <h3 class="spell__subttl">Diplôme DAEU Option A</h3>
             <p class="spell__text">Diplôme Niveau 4</p>
             <p class="spell__text">Obtenu le : 03 Octobre 2023</p>
           </div>
           <div class="spell__details">
-            <H5 class="spell__subttl">Domaines :</h5>
+            <h4 class="spell__subttl">Domaines :</h4>
             <p class="spell__text spell__position">- Francais, Anglais.</p>
             <p class="spell__text spell__position">- Histoire et Geographie.</p>
           </div>
         </li>
 
         <!-- Expérience chez Webhelp -->
-        <li class="spell__item animate-right">
+        <li class="spell__item animate-right" role="listitem">
           <div>
             <h3 class="spell__subttl">Expérience Professionnelle</h3>
             <p class="spell__text">Webhelp</p>
             <p class="spell__text">de Février 2006 à Novembre 2023</p>
           </div>
           <div class="spell__details">
-            <H5 class="spell__subttl">Compétences acquises :</h5>
+            <h4 class="spell__subttl">Compétences acquises :</h4>
             <p class="spell__text spell__position">- Relation client,</p>
             <p class="spell__text spell__position">- Communication,</p>
             <p class="spell__text spell__position">- Adaptabilité,</p>
@@ -203,17 +219,24 @@
 
     </section>
 
-
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
 
     <p class="footer__copyright">&copy; 2024 Mickael Blondeau. Tous droits réservés.</p>
 
     <div class="footer__social-links">
-      <a href="https://fr.linkedin.com/in/mickael-blondeau-b19324172?trk=people-guest_people_search-card" target="_blank" class="footer__link"><img src="img/linkedin.svg" alt="logo de LinkedIn"></a>
-      <a href="https://github.com/Ohrion13" target="_blank" class="footer__link"><img src="img/github.svg" alt="logo de Github"></a>
-      <p>mortharion13@gmail.com</p>
+
+      <a href="https://fr.linkedin.com/in/mickael-blondeau-b19324172?trk=people-guest_people_search-card"
+        target="_blank" class="footer__link" aria-label="Lien vers LinkedIn">
+        <img src="img/linkedin.svg" alt="logo LinkedIn">
+      </a>
+      <a href="https://github.com/Ohrion13" target="_blank" class="footer__link" aria-label="Lien vers Github">
+        <img src="img/github.svg" alt="logo Github">
+      </a>
+
+      <p>blondeaumickael3@gmail.com</p>
+
     </div>
 
   </footer>

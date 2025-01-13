@@ -121,14 +121,26 @@ function handleSectionVisibility() {
  * This function adds or removes the 'active' class on the navigation menu and the header when the burger button is clicked.
  */
 function toggleBurgerMenu() {
+
   const burgerButton = document.querySelector('.nav__burger');
   const header = document.querySelector('.header');
   const navList = document.querySelector('.nav__list');
+  const navLinks = document.querySelectorAll('.nav__link');
 
   burgerButton.addEventListener('click', () => {
+
     navList.classList.toggle('active');
     burgerButton.classList.toggle('active');
     header.classList.toggle('active');
+  });
+
+  navLinks.forEach(link => {
+
+    link.addEventListener('click', () => {
+      navList.classList.remove('active');
+      burgerButton.classList.remove('active');
+      header.classList.remove('active');
+    });
   });
 }
 
