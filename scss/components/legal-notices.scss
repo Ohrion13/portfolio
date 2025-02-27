@@ -1,0 +1,23 @@
+@use '../var' as *;
+@use '../mixins' as *;
+
+.notices {
+
+    &__ttl {
+        color: $Txt;
+        font-size: 1.37rem;
+        text-align: center;
+    }
+
+    &__sub-ttl {
+        color: $Txt;
+        font-size: 1.37rem;
+        margin: 2rem 0 1.25rem 0;
+    }
+
+    &__lst {
+        margin-bottom: 0.75rem;
+    }
+
+
+}

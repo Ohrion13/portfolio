@@ -1,11 +1,14 @@
 @use 'var' as *;
+
 @use 'reset';
 @use 'root';
 @use 'mixins';
+
 @use 'components/header';
 @use 'components/index';
 @use 'components/character';
 @use 'components/presentation';
 @use 'components/skills';
 @use 'components/spells';
+@use 'components/legal-notices';
 @use 'components/footer';
