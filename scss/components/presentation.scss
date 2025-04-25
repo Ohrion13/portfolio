@@ -36,4 +36,44 @@
   &__sub-ttl {
     color: $subtitle-color;
   }
+
+  &__lnk {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #6b4fbb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #583da1;
+      color: $title-color;
+    }
+  }
+
+  &__container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #C2B4E1;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  &__container-txt {
+    color: #ddd;
+    margin-bottom: 1rem;
+  }
 }
